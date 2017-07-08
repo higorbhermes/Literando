@@ -12,7 +12,7 @@ public class TelaPrincipal extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela_principal);
 
-        String itens[] = {"Novo Livro", "Meus Livros", "Buscar Livro"};
+        String itens[] = {"Novo Livro", "Meus Livros", "Buscar Livro", "Buscar Usuário"};
         ListView listaSimples = (ListView) findViewById(R.id.lista);
         ArrayAdapter<String> adapterSimples = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, itens);
 
