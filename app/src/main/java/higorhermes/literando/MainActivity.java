@@ -12,11 +12,19 @@ public class MainActivity extends AppCompatActivity {
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_main);
-            Button ok = (Button) findViewById(R.id.button_entrar);
-            ok.setOnClickListener(new View.OnClickListener() {
+            Button b_enter = (Button) findViewById(R.id.button_entrar);
+            Button b_cadastro = (Button) findViewById(R.id.button_cadastrar);
+            b_enter.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent intent = new Intent(MainActivity.this, TelaPrincipal.class);
+                    Intent intent = new Intent(MainActivity.this, TelaAcesso.class);
+                    startActivity(intent);
+                }
+            });
+            b_cadastro.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(MainActivity.this, TelaCadastro.class);
                     startActivity(intent);
                 }
             });
